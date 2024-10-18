@@ -1,1 +1,36 @@
-@use './button.scss';
+// 导入 Sass 的颜色模块
+@use 'sass:color';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 初始色值
+$primary-color: #7E81CC;
+$success-color: #33ba53;
+$danger-color: #c82333;
+$warning-color: #ffc107;
+$info-color: #FFF;
+
+// hover和active颜色
+$hover-lighten-percent: 10%; // 可以在这里调整
+$hover-darken-percent: 10%; // 可以在这里调整
+
+// hover颜色基于初始色值变淡
+$primary-color-hover: color.adjust($primary-color, $lightness: $hover-lighten-percent);
+$success-color-hover: color.adjust($success-color, $lightness: $hover-lighten-percent);
+$danger-color-hover: color.adjust($danger-color, $lightness: $hover-lighten-percent);
+$warning-color-hover: color.adjust($warning-color, $lightness: $hover-lighten-percent);
+$info-color-hover: color.adjust($info-color, $lightness: -10%);
+
+// active颜色基于初始色值变暗
+$primary-color-active: color.adjust($primary-color, $lightness: -$hover-darken-percent);
+$success-color-active: color.adjust($success-color, $lightness: -$hover-darken-percent);
+$danger-color-active: color.adjust($danger-color, $lightness: -$hover-darken-percent);
+$warning-color-active: color.adjust($warning-color, $lightness: -$hover-darken-percent);
+$info-color-active: color.adjust($info-color, $lightness: -20%);
+
+$border: 1px solid #ccc;
+$border-radius: 6px;

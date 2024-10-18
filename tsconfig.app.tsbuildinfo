@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/main.ts","./src/vite-env.d.ts","./src/app.vue","./src/components/button.vue"],"version":"5.6.3"}
+{"root":["./src/index.ts","./src/main.ts","./src/vite-env.d.ts","./src/utils/tips.ts","./src/app.vue","./src/components/button.vue","./src/components/dialog.vue","./src/components/input.vue","./src/components/table.vue","./src/components/tips.vue"],"errors":true,"version":"5.6.3"}
